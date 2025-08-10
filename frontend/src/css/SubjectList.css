@@ -1,0 +1,105 @@
+/* ถ้าคุณมี heading อยู่ก่อน subject-list เช่น <h2>Subject List</h2> */
+
+
+.subject-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* เพิ่มระยะห่างให้ดูสบายตา */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: left;
+  padding-left: 0; /* ลบ bullet padding */
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.subject-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+
+  
+  width: 250px;       /* กำหนดความกว้างคงที่ */
+  height: 48px;       /* กำหนดความสูงคงที่ */
+  box-sizing: border-box; /* ให้ padding อยู่ในขนาดนี้ */
+}
+
+.subject-name {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.button-group {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-button {
+  background: transparent;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.icon-button img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: brightness(0.3); /* ทำไอคอนสีอ่อนลง */
+  transition: filter 0.2s;
+}
+
+.icon-button:hover img {
+  filter: brightness(1); /* โดน hover ให้สีเข้มขึ้น */
+}
+
+/* ถ้าต้องการสีเฉพาะปุ่ม Delete */
+.delete-button img {
+  filter: brightness(0.3) saturate(1.5) hue-rotate(-10deg);
+}
+
+.delete-button:hover img {
+  filter: brightness(1) saturate(1.5) hue-rotate(-10deg);
+}
+
+/* ถ้าต้องการสีเฉพาะปุ่ม Edit */
+.edit-button img {
+  filter: brightness(0.3) saturate(0.5) hue-rotate(170deg);
+}
+
+.edit-button:hover img {
+  filter: brightness(1) saturate(0.5) hue-rotate(170deg);
+}
+
+
+.save-button img,
+.cancel-button img {
+  display: block;
+  cursor: pointer;
+  filter: brightness(0.6);
+  transition: filter 0.2s ease;
+}
+
+.save-button:hover img {
+  filter: brightness(1);
+}
+
+.cancel-button:hover img {
+  filter: brightness(1);
+}
+
+.cancel-button {
+  background-color: transparent !important;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+}
+

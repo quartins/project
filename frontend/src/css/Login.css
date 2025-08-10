@@ -1,0 +1,92 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(76, 63, 116, 0.2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+}
+
+/* body {
+  background-image: url('bk.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin: 0;
+} */
+
+
+.login-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #030206;
+}
+
+.login-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff8cc9;
+  color: #ffffff;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #fdb0e0;
+}
+
+.login-error {
+  color: rgb(220, 14, 14);
+  margin-top: 15px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.login-signup-text {
+  margin-top: 25px;
+  text-align: center;
+  color: #726e6e;
+}
+
+.login-link-button {
+  background: none;
+  border: none;
+  color: rgb(7, 13, 19);
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 14px;
+  padding: 0;
+}
+
+.page-with-background {
+  background-image: url('/bk.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

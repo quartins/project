@@ -1,0 +1,136 @@
+html, body.todo-page {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #fffee2;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  color: rgb(156, 133, 133);
+  padding: 12px 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* ชื่อแอปใน navbar ซ้าย */
+.navbar-left .app-title {
+  font-size: 50px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ถ้าใช้รูป logo กับชื่อ ให้ปรับ logo */
+.navbar-left img.logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+/* ตัวปุ่ม logout อยู่ขวาสุด */
+.navbar-right button {
+  background: none;
+  border: 1.5px solid white;
+  border-radius: 4px;
+  color: white;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Sidebar navbar ด้านซ้าย fixed */
+.sidebar {
+  position: fixed;
+  top: 56px; /* ความสูง navbar */
+  left: 0;
+  bottom: 0;
+  width: 280px;
+  background-color: #f6faff;
+  padding: 1.5rem;
+  border-radius: 0 0 8px 0;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 900;
+}
+
+
+.sidebar.right {
+  right: 0;
+  border-radius: 0 0 0 8px;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+}
+/* เนื้อหาหลัก */
+.main-content {
+  margin-left: 280px; /* เว้นที่ sidebar */
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  min-height: calc(100vh - 56px);
+  overflow-y: auto;
+}
+
+/* Title หัวข้อใน main-content */
+.section-title {
+  margin-bottom: 12px;
+    padding-left: 0;    /* ชิดซ้าย */
+
+}
+
+/* Subject Section ใน Sidebar */
+.subject-section {
+  display: flex;
+  flex: 1;
+  border: none;
+  padding: 0;
+  flex-direction: column;
+  background-color: transparent;
+  height: auto;
+  gap: px; /* ลดช่องว่างระหว่างวิชา */
+
+}
+
+.todo-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+.add-task-button {
+  padding: 10px 16px;
+  background-color: #5caeff;
+  color: white;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-task-button:hover {
+  background-color: #3b92e5;
+}
+
+.task-header {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* ระยะห่างระหว่างหัวข้อกับปุ่ม */
+  margin-bottom: 1rem;
+}
+
+.task-title {
+  margin: 0;
+}
